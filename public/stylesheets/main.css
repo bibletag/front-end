@@ -1,3 +1,5 @@
 #nav-search{
   width: 100%;
+  position: relative;
+  top: 7px;
 }
