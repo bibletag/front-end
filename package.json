@@ -1,0 +1,23 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bower": "bower"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibletag/front-end.git"
+  },
+  "author": "Benjamin Bledsoe <bledsoedesigns@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bibletag/front-end/issues"
+  },
+  "homepage": "https://github.com/bibletag/front-end#readme",
+  "dependencies": {
+    "bower": "^1.7.7"
+  }
+}
