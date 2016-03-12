@@ -7,18 +7,20 @@ app.controller('searchCtrl', ["$http", function($http){
 
   //initialize user-searched tag
   self.searchTag = "";
-  // searched by default
+  //init self.userSearched
   self.userSearched = false;
-
-  self.queryApi = () => {
-    self.userSearched = true;
-  }
 
   self.outputTagsKeypress = (event, searchInput) => {
     // check if enter key was pressed
     if(event.keyCode === 13){
-      console.log(searchInput);
-      self.queryApi();
+      self.searchedText = searchInput;
+      // query api
+      $http.get(`http://45.55.144.141:8080/tag/${searchInput}`)
+      .then((data) => {
+        self.userSearched = true;
+        console.log(data);
+
+      });
     }
   };
 
