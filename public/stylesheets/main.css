@@ -1,4 +1,4 @@
-/* Nav styles*/
+/* ===== Nav styles ==== */
 
 .nav, .navbar-default, .navbar-default input[type="text"]{
   background-color: transparent;
@@ -9,6 +9,7 @@
   box-shadow: none;
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+  left: 15px;
 }
 #nav-search{
   width: 20%;
@@ -26,11 +27,17 @@
   box-shadow: none;
 }
 
+#searchIcon{
+  position: absolute;
+  top: 10px;
+  color: white;
+}
+
 body{
   background-image:linear-gradient(to bottom, #36b9e4, #08e2bf);
 }
 
-/* View: Search Styles */
+/* ===== View: Search Styles ===== */
 
 .jumbotron{
   background-color: transparent;
@@ -139,5 +146,11 @@ i:hover
   }
   #pre-output span{
     letter-spacing: -.05rem;
+  }
+  #searchIcon{
+    left: -8px;
+  }
+  .navbar-default input[type="text"]{
+    left: 0px;
   }
 }
