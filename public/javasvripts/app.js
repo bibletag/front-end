@@ -10,7 +10,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
 		.state('index', {
 			url: '/',
 			templateUrl: '/partials/search.html'
-		});
+		})
 	//if we load in erroneous route, go  back to base/catch-all route
 	$urlRouterProvider.otherwise('/');
 });

@@ -1,16 +1,18 @@
 <!-- search output -->
-<nav class="navbar navbar-default">
+<div ng-controller="searchCtrl as search">
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
         <div class="col-md-12">
               <div id="nav-search" class="input-group">
-                  <input type="text" class="form-control" placeholder="Search for tags" name="q">
+                  <input type="text" ng-model="search.searchTag" class="form-control" placeholder="Search for tags" name="q">
                   <div class="input-group-btn">
-                      <button class="btn btn-default" style="height:34px" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                      <button class="btn btn-default" style="height:34px" type="submit"><i class="glyphicon glyphicon-search" ng-click="search.outputTags(search.searchTag)"></i></button>
                   </div>
               </div>
         </div>
     </div><!--/.container-fluid -->
   </nav><!--/ nav -header -->
   <h1>seach output</h1>
+  </div>
