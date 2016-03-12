@@ -6,7 +6,7 @@ app.controller('searchCtrl', ["$http", function($http){
   const self = this;
 
   //initialize user-searched tag
-  // self.searchTag = "";
+  self.searchTag = "";
 
   // get search data from api
   self.outputTags = (searchInput) => {

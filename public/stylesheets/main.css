@@ -3,3 +3,7 @@
   position: relative;
   top: 7px;
 }
+
+#nav-search button{
+  height: 34px;
+}
