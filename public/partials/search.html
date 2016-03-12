@@ -1,6 +1,6 @@
 <!-- search output -->
 <div ng-controller="searchCtrl as search">
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default animated fadeInUp">
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
@@ -18,9 +18,9 @@
   <div class="container-fluid">
     <div class="col-md-12 jumbotron">
       <div ng-hide="search.userSearched" id="pre-output">
-        <h1>Bible<span>Tags</span></h1>
+        <h1 class="animated fadeIn">Bible<span>Tags</span></h1>
       </div>
-      <div ng-show="search.userSearched" id="search-Output">
+      <div class="animated fadeIn" ng-show="search.userSearched" id="search-Output">
         <h1 class="search-subtitle">Result tag title</h1>
         <h3 class="search-verseheading">Verse/passage ref: </h3>
         <h3 class="search-verse">loreum ipsum  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
