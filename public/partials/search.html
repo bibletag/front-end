@@ -17,9 +17,14 @@
 
   <div class="container-fluid">
     <div class="col-md-12 jumbotron">
-      <h1 class="search-subtitle">Result tag title</h1>
-      <h3 class="search-verseheading">Verse/passage ref: </h3>
-      <h3 class="search-verse">loreum ipsum  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+      <div ng-hide="search.userSearched" id="pre-output">
+        <h1>Bible<span>Tags</span></h1>
+      </div>
+      <div ng-show="search.userSearched" id="search-Output">
+        <h1 class="search-subtitle">Result tag title</h1>
+        <h3 class="search-verseheading">Verse/passage ref: </h3>
+        <h3 class="search-verse">loreum ipsum  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h3>
+      </div>
     </div>
   </div>
 
