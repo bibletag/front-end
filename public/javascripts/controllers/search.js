@@ -14,13 +14,6 @@ app.controller('searchCtrl', ["$http", function($http){
     self.userSearched = true;
   }
 
-  // get search data from api
-  self.outputTags = (searchInput) => {
-    console.log("inside click function");
-    console.log(searchInput);
-    self.queryApi();
-  };
-
   self.outputTagsKeypress = (event, searchInput) => {
     // check if enter key was pressed
     if(event.keyCode === 13){
