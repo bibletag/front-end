@@ -14,4 +14,11 @@ app.controller('searchCtrl', ["$http", function($http){
     console.log(searchInput);
   };
 
+  self.outputTagsKeypress = (event, searchInput) => {
+    // check if enter key was pressed
+    if(event.keyCode === 13){
+      console.log(searchInput);
+    }
+  };
+
 }]);

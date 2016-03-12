@@ -1,3 +1,16 @@
+/* Nav styles*/
+
+.nav, .navbar-default, .navbar-default input[type="text"]{
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-default input[type="text"]{
+  box-shadow: none;
+  color: white;
+}
+
+
 #nav-search{
   width: 100%;
   position: relative;
@@ -6,4 +19,70 @@
 
 #nav-search button{
   height: 34px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+#nav-search i, #nav-search i:active, #nav-search i:focus{
+  box-shadow: none;
+}
+
+body{
+  background-image:linear-gradient(to bottom, #36b9e4, #08e2bf);
+}
+
+/* View: Search Styles */
+.jumbotron{
+  background-color: transparent;
+  /*box-shadow: 1px 1px 4px rgba(96, 96, 97, 0.51);*/
+  color: white;
+}
+.search-subtitle{
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+  margin-top: 0px;
+  top: -20px;
+  font-weight: 100;
+  letter-spacing: .09rem;
+}
+
+.search-verse, .search-verseheading{
+  position: relative;
+  top: -7px;
+  font-weight: 300;
+  letter-spacing: .09rem;
+}
+
+.search-verse{
+  font-size: 1.8rem;
+  font-weight: 100;
+  letter-spacing: .09rem;
+}
+.search-verseheading{
+  font-size: 2rem;
+
+}
+
+/* Vender modifications */
+.navbar-default input[type="text"]::webkit-input-placeholder{
+  color: white;
+}
+
+.navbar-default input[type="text"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: white;
+}
+.navbar-default input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: white;
+   opacity:  1;
+}
+.navbar-default input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: white;
+   opacity:  1;
+}
+.navbar-default input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+}
+.navbar-default input[type="text"]:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: white;
 }
