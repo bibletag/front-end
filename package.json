@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bower": "bower"
+    "bower": "bower",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/bibletag/front-end#readme",
   "dependencies": {
-    "bower": "^1.7.7"
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "path": "^0.12.7"
   }
 }
