@@ -7,8 +7,9 @@
         <div class="col-md-12">
           <div id="nav-search" class="input-group">
             <i id="searchIcon" class="glyphicon glyphicon-search" ng-click="search.outputTags(search.searchTag)"></i>
-              <input type="text" ng-model="search.searchTag" class="form-control" placeholder="Search for tags" name="q" ng-keypress='search.outputTagsKeypress($event, search.searchTag)'>
+              <input type="text" ng-model="search.searchTag" class="form-control" placeholder="Search for tags" name="q" ng-keypress='search.outputTagsKeypress($event, search.searchTag)'/>
           </div>
+          <i id="addIcon" class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#addModal"></i>
         </div>
     </div><!--/.container-fluid -->
   </nav><!--/ nav -header -->
@@ -25,5 +26,30 @@
       </div>
     </div>
   </div>
+
+  <!-- Add Tag Modal -->
+<div id="addModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add A Tag</h4>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" placeholder="Tag Name" name="tagName"/>
+        <input class="form-control" placeholder="Book" name="book"/>
+        <input class="form-control" placeholder="Starting Verse Number" />
+        <input class="form-control" placeholder="Ending Verse Number" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default ftr_btn" data-dismiss="modal">Add</button>
+        <button type="button" class="btn btn-default ftr_btn" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   </div>

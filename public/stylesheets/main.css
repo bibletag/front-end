@@ -27,6 +27,14 @@
   box-shadow: none;
 }
 
+#addIcon{
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  font-weight: 100;
+}
+
 #searchIcon{
   position: absolute;
   top: 10px;
@@ -83,8 +91,48 @@ body{
 }
 .search-verseheading{
   font-size: 2rem;
-
 }
+/* modal */
+.modal-header{
+  background-color: white;
+  color: #36B9E4;
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+}
+
+.modal-body input{
+  margin-bottom: 10px;
+}
+
+.modal-header h4{
+  font-weight: 300;
+}
+.modal-footer{
+  text-align: center;
+  border-radius: 0px 0px 5px 5px;
+  border-top: none;
+}
+.ftr_btn{
+  background-color: #36b9e4;
+  color: white;
+  border: none;
+}
+
+.modal-backdrop{
+  background-color: rgba(11, 11, 11, 0.4);
+}
+.modal-content{
+    -webkit-box-shadow: 0 5px 15px rgba(98, 98, 98, 0.5);
+    -moz-box-shadow: 0 5px 15px rgba(98, 98, 98, 0.5);
+    -o-box-shadow: 0 5px 15px rgba(98, 98, 98, 0.5);
+    box-shadow: 0 5px 15px rgba(98, 98, 98, 0.5);
+}
+
+.modal-footer button:hover{
+  background-color: #36b9e4;
+  color: white;
+}
+
 
 /* Vender modifications */
 .navbar-default input[type="text"]::webkit-input-placeholder{
@@ -135,7 +183,7 @@ i:hover
 
 @media screen and (max-width: 900px){
   #nav-search {
-    width: 100%;
+    width: 80%;
   }
   #pre-output,#pre-output h1,#pre-output span{
     text-align: center;
