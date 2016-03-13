@@ -19,10 +19,13 @@
       <div ng-hide="search.userSearched" id="pre-output">
         <h1 class="animated fadeIn">Bible<span>Tags</span></h1>
       </div>
-      <div class="animated fadeIn" ng-show="search.userSearched" id="search-Output">
+      <div class="animated fadeIn" ng-show="search.userSearched && !search.error" id="search-Output">
         <h1 class="search-subtitle">{{search.searchedText}}</h1>
-        <h3 class="search-verseheading">{{search.book_name+" "+search.chapter_id+" : "+ search.verse_id}} </h3>
-        <h3 class="search-verse">{{verse_text}}</h3>
+          <h3 class="search-verseheading">{{search.tagData.data[0].book_name+" "+search.tagData.data[0].chapter_id+" : "+ search.tagData.data[0].verse_id}} </h3>
+          <h3 class="search-verse">{{search.tagData.data[0].verse_text}}</h3>
+      </div>
+      <div class="animated fadeIn" ng-show="search.error">
+          <h3 class="search-verseheading">{{search.message}}</h3>
       </div>
     </div>
   </div>
@@ -38,13 +41,14 @@
         <h4 class="modal-title">Add A Tag</h4>
       </div>
       <div class="modal-body">
-        <input class="form-control" placeholder="Tag Name" name="tagName"/>
-        <input class="form-control" placeholder="Book" name="book"/>
-        <input class="form-control" placeholder="Starting Verse Number" />
-        <input class="form-control" placeholder="Ending Verse Number" />
+        <input class="form-control" placeholder="Tag Name" ng-model="tagName"/>
+        <input class="form-control" placeholder="Book" ng-model="tagBook"/>
+        <input class="form-control" placeholder="Chapter" ng-model="tagChapter"/>
+        <input class="form-control" placeholder="Starting Verse Number" ng-model="tagSVerse"/>
+        <input class="form-control" placeholder="Ending Verse Number" ng-model="tagEVerse"/>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default ftr_btn" data-dismiss="modal">Add</button>
+        <button type="button" class="btn btn-default ftr_btn" data-dismiss="modal" ng-click="search.addTag(tagName, tagBook, tagChapter, tagSVerse, tagEVerse )">Add</button>
         <button type="button" class="btn btn-default ftr_btn" data-dismiss="modal">Cancel</button>
       </div>
     </div>

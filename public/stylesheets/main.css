@@ -31,7 +31,7 @@
   color: white;
   position: absolute;
   top: 20px;
-  right: 0px;
+  right: 75%;
   font-weight: 100;
 }
 
@@ -68,7 +68,7 @@ body{
 }
 
 .search-subtitle{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: center;
   position: relative;
   margin-top: 0px;
@@ -184,6 +184,13 @@ i:hover
 @media screen and (max-width: 900px){
   #nav-search {
     width: 80%;
+  }
+  #addIcon{
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    font-weight: 100;
   }
   #pre-output,#pre-output h1,#pre-output span{
     text-align: center;
