@@ -20,9 +20,16 @@ app.controller('searchCtrl', ["$http", function($http){
       // query api
       $http.get(`${apiUrl}/tag/${searchInput}`)
       .then(function successCallback(response) {
+
+          if(response.data === ""){
+            self.error = true;
+            self.userSearched = true;
+            self.message = `Nothing found for ${searchInput}, please try again or tag ${searchInput}!`;
+          } else {
             self.error = false;
             self.userSearched = true;
             self.tagData = response;
+          }
       }, function errorCallback(response) {
           self.error = true;
           self.userSearched = true;
@@ -35,7 +42,7 @@ app.controller('searchCtrl', ["$http", function($http){
     // validate for post
     let tagInput = tag;
     let bookInput = book;
-    let chapterInput = chapter;
+    let chapterInput = parseInt(chapter);
     let verseInputOne = parseInt(verseOne);
     let verseInputTwo = parseInt(verseTwo);
 
@@ -50,14 +57,21 @@ app.controller('searchCtrl', ["$http", function($http){
         "endVerse":verseInputTwo
       };
 
-      $http.post(`${apiUrl}/tag`, reqData)
+      const stringedData = JSON.stringify(reqData);
+
+
+      $http.post(`http://45.55.144.141:8080/tag`, stringedData)
       .then(function successCallback(response) {
         console.log("sucessful");
         console.log(response);
         }, function errorCallback(response) {
           console.log("sucessful");
           console.log(response);
+          console.log("reqData ->>>>>>>>>>>>");
+          console.log(stringedData);
         });
+
+
   }
 };
 

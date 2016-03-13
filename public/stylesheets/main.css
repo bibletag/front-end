@@ -105,7 +105,7 @@ body{
   border: none;
   border-bottom: 1px solid rgba(54, 185, 228, 0.35);
   box-shadow: inset 0px 0px 0px 0px transparent;
-  border-radius: 0px;
+  border-radius: 2px 2px 0px 0px;
 }
 
 .modal-header h4{
