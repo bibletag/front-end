@@ -15,7 +15,7 @@ app.controller('searchCtrl', ["$http", function($http){
 
   self.outputTagsKeypress = (event, searchInput) => {
     // check if enter key was pressed
-    if(event.keyCode === 13){
+    if(event.keyCode === 13 && searchInput !== ""){
       self.searchedText = searchInput;
       // query api
       $http.get(`${apiUrl}/tag/${searchInput}`)
